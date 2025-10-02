@@ -1,67 +1,59 @@
-# :fire: Informata-Frontend-Test
+# InformataApp
 
-Hi pessoas!
-Cs tão bem?
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.3.
 
-Esse vai ser o nosso teste técnico para a vaga referente a desenvolvedor front-end na informata.
+## Development server
 
-## Projeto Front-end
+To start a local development server, run:
 
-Nesse projeto, você deverá criar um sistema utilizando angular 4+ (a versão mais atual de preferência, como o angular 20)
-Deverá utilizar de preferência o npm ou yarn como gerenciador de pacotes.
-Você deverá utilizar o PrimeNG como biblioteca de estilos e componentes.
+```bash
+ng serve
+```
 
-As features a serem construidas são:
+Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-- Tela de cadastro ( Uma tela fake, não precisa de integração com API, salvar os dados no local storage )
-- Tela de login ( Verificar se esses dados existem para validar a seção );
-- Função de logout (limpar o local storage e voltar para a tela de login);
-- Tela de listagem de itens (deve haver um campo de pesquisa e deverá ser consumido o endpoint citado abaixo);
+## Code scaffolding
 
-Após o usuario realizar o login, deve ser exibida uma tela de listagem de itens. Nessa tela, deve existir:
+Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
 
-- Campo de pesquisa do itens;
-- Algo para chamar a funcionalidade de logout
+```bash
+ng generate component component-name
+```
 
-A API de itens é essa 🎮:
+For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
 
-https://docs.zelda.fanapis.com/
+```bash
+ng generate --help
+```
 
-### O que iremos avaliar?
+## Building
 
-Você será avaliado pela usabilidade, design e pela arquitetura do app. É esperado que você consiga explicar as decisões que tomou durante o desenvolvimento através dos commits.
+To build the project run:
 
-Aqui, usamos o padrão de commits `<type>(<scope>): <subject>`, que é amplamente utilizado por:
+```bash
+ng build
+```
 
-- https://github.com/angular/angular/blob/master/CONTRIBUTING.md#commit
-- http://karma-runner.github.io/3.0/dev/git-commit-msg.html
-- Entre outros
+This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
-Em suma, a avaliação se dará por:
+## Running unit tests
 
-- Estruturação (arquitetura) do app;
-- Uso do git;
-- Utilização do primeng e seus componentes;
-- Componetização;
-- JavaScript e typescript (ES6, async/await, http...);
-- Utilização de routing;
-- Utilização do reactive forms;
-- Testes (e2e/cypress)-**extra**-;
-- Algo mais que você achar relevante/interessante a ser desenvolvido, pode fazer, e consideraremos como um extra também;
+To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
 
-# Entrega final
+```bash
+ng test
+```
 
-Faça um fork desse desse repositório em seu Github e nos envie um Pull Request com o resultado.
+## Running end-to-end tests
 
-Você pode alterar/ajustar/adicionar um `README.md` explicando como executar o projeto e qualquer outro comentário extra que você tenha a fazer tanto sobre o teste, quanto as camadas que foram construidas por você.
+For end-to-end (e2e) testing, run:
 
-Apesar de parecer simples (e talvez seja), não subestime...se parece simples para você, provavelmente parece simples para os outros também, o que leva a um nivelamento legal no fim das contas.
+```bash
+ng e2e
+```
 
-Caso não conclua tudo, enviar mesmo assim o resultado. Sabemos o quão dificil pode ser um teste desses pra quem já está ocupado durante a semana inteira.
+Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
 
-Nossa regra numero 1 é qualidade de codigo/manutenção. Se você conseguiu gerar códigos de facil manutenção, mesmo que incompletos, irá agregar e muito para nós.
+## Additional Resources
 
-Qualquer duvida, enviar email para:
-
-- thiago.dantas@informata.com.br
-- thiago@parasolcs.com
+For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.

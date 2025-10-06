@@ -1,1 +1,99 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #36311F;
+}
+
+body, app-root, html, button, input, textarea, select, .p-component {
+  font-family: 'Poppins', sans-serif !important;
+  color: #EAE1AE !important;
+}
+
+.p-inputtext {
+  font-family: 'Poppins', sans-serif !important;
+  color: white !important;
+  width: 100% !important;
+}
+
+.p-inputtext:focus {
+  border-color: #138A36 !important;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #1A170F;
+  height: 70px;
+  width: 100%; 
+  box-sizing: border-box;
+  padding: 0 1rem;
+}
+
+header h1 {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+  white-space: nowrap;
+  color: #D2BF55;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  display: block;
+  margin-right: 1rem; 
+  background: url('assets/zelda.png') no-repeat center center;
+  background-size: contain;
+  flex-shrink: 0;
+}
+
+.button {
+  background: #138A36 !important;
+  border-color: #138A36 !important;
+  color: #EAE1AE !important;
+  min-width: 150px;
+}
+
+.info-box {
+  background-color: #463520 !important;
+}
+
+@media (max-width: 768px) {
+  header {
+    height: 60px;
+    padding: 0 0.8rem;
+  }
+
+  .logo {
+    width: 32px;
+    height: 32px;
+    margin-right: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 0 0.8rem;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .logo {
+    width: 28px;
+    height: 28px;
+    margin-right: 0.3rem;
+  }
+}
+
+/* Debugs */
+.info-container {
+  outline: 1px solid blue;
+}
+
+.login-container {
+  outline: 1px solid orangered;
+}

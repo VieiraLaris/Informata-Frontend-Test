@@ -1,0 +1,46 @@
+<div 
+  class="p-d-flex p-jc-center p-ai-center" 
+  style="border-radius: 8px; padding: 5%; display: flex; justify-content: center; align-items: center;">
+  <p-card 
+    header="Bem-vindo(a) ao Vault!" 
+    styleClass="p-shadow-10" 
+    [style]="{ width: '400px', background: '#1A170F' }">
+    <div 
+      class="p-fluid" 
+      style="display: flex; flex-direction: column; align-items: left; justify-content: center; gap: 0.5em; padding-bottom: 20px">
+      <div 
+        class="p-field" 
+        style="margin-bottom: 1.5em">
+        <label for="username">Usuário</label>
+        <input 
+          id="username" 
+          type="text" 
+          pInputText [(ngModel)]="usuario" />
+      </div>
+
+      <div 
+        class="p-field" 
+        style="margin-bottom: 1.5em;">
+        <label for="password">Senha</label>
+        <p-password 
+          id="password" 
+          [(ngModel)]="senha" 
+          [toggleMask]="true" 
+          [feedback]="false"></p-password>
+      </div>
+      <div style="display: flex; justify-content: center; align-items: center;">
+        <p-button 
+          label="Entrar" 
+          styleClass="button" 
+          (click)="logar()"></p-button>
+      </div>
+    </div>
+    Ainda não possui uma conta?
+    <a 
+      routerLink="/cadastro" 
+      class="p-d-inline-block p-mt-3 p-p-2" 
+      style="color: #70d18d">
+      Cadastre-se aqui!
+    </a>
+  </p-card>
+</div>

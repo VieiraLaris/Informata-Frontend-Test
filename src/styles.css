@@ -1,5 +1,9 @@
-body {
+html, body, app-root {
+  height: 100%;
   margin: 0;
+}
+
+body {
   padding: 0;
   background-color: #36311F;
 }
@@ -7,6 +11,11 @@ body {
 body, app-root, html, button, input, textarea, select, .p-component {
   font-family: 'Poppins', sans-serif !important;
   color: #EAE1AE !important;
+}
+
+app-root {
+  display: flex;
+  flex-direction: column;
 }
 
 .p-inputtext {
@@ -28,6 +37,7 @@ header {
   width: 100%; 
   box-sizing: border-box;
   padding: 0 1rem;
+  flex-shrink: 0;
 }
 
 header h1 {
@@ -58,6 +68,90 @@ header h1 {
 
 .info-box {
   background-color: #463520 !important;
+}
+
+.content-container {
+  flex-grow: 1; 
+  padding: 2rem; 
+  box-sizing: border-box;
+  overflow-y: auto;
+   height: 0;
+}
+
+.centralizer-wrapper {
+    display: flex; 
+    justify-content: center; 
+    align-items: flex-start;
+    width: 100%; 
+}
+
+.catalogo-container {
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 0;
+}
+
+.p-datatable {
+    background-color: #1A170F !important;
+    border: 1px solid #D2BF55;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.p-datatable-thead > tr > th {
+    background-color: #463520 !important;
+    color: #D2BF55 !important;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 1rem 1.2rem;
+    text-align: left;
+    border-color: #1A170F;
+}
+
+.p-datatable-tbody > tr > td {
+    background-color: #1A170F !important;
+    color: #EAE1AE !important;
+    padding: 0.8rem 1.2rem;
+    border-color: #36311F;
+    vertical-align: top;
+}
+
+.p-datatable-tbody > tr:nth-child(even) {
+    background-color: #2A2416 !important;
+}
+
+.p-datatable-tbody > tr:hover {
+    background-color: #463520 !important;
+    cursor: pointer;
+}
+
+.p-datatable-tbody > tr > td:nth-child(2) {
+    max-width: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+}
+
+.search-container {
+    margin-bottom: 2rem;
+    width: 100%;
+    max-width: 60rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: 2px solid #1A170F; 
+    background-color: #36311F; 
+    color: #EAE1AE !important; 
+}
+
+.search-container input:focus {
+    border-color: #D2BF55 !important;
 }
 
 @media (max-width: 768px) {

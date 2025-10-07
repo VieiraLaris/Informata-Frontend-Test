@@ -1,4 +1,4 @@
-# Informata Frontend Test - Zelda Vault
+# 🎮 Informata Frontend Test - Zelda Vault
   
 Este projeto foi desenvolvido como parte do processo seletivo para a vaga de Desenvolvedor(a) Front-end na Informata.
 

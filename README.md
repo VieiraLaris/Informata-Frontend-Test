@@ -2,7 +2,7 @@
   
 Este projeto foi desenvolvido como parte do processo seletivo para a vaga de Desenvolvedor(a) Front-end na Informata.
 
-O objetivo é construir uma aplicação Angular utilizando o PrimeNG como biblioteca de componentes e estilos, aplicando boas práticas de arquitetura, componentização e usabilidade.
+O objetivo é construir uma aplicação Angular utilizando o PrimeNG como biblioteca de componentes e estilos e integrando uma API OpenSource com informações sobre jogos da franquia Zelda.
 
 ---
 

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -11,13 +11,20 @@ export class LoginComponent {
   usuario: string = '';
   senha: string = '';
 
-  constructor(private router: Router) {}
+  private router = inject(Router);
 
   logar() {
-    if (this.usuario === 'teste' && this.senha === '123') {
-      this.router.navigate(['/catalogo']);
-    } else {
-      alert('Usuário ou senha incorretos!'); 
-    }
+    const usuarioJson = localStorage.getItem('currentUser');
+
+    if (usuarioJson) {
+      const storedUser = JSON.parse(usuarioJson);
+      
+      if (this.usuario === storedUser.usuario && this.senha === storedUser.senha) {
+        localStorage.setItem('isLoggedIn', 'true'); 
+        this.router.navigate(['/catalogo']);
+        return;
+      }
+    } 
+    alert('Usuário ou senha incorretos!'); 
   }
 }

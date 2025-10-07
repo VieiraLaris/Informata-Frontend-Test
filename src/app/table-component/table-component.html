@@ -1,0 +1,28 @@
+<div class="search-container">
+    <input type="text" pInputText placeholder="Pesquisar jogo por nome..." 
+           (input)="table.filterGlobal($event.target.value, 'contains')">
+</div>
+
+<p-table #table [value]="this.tableService.product()"
+[tableStyle]="{'min-width': '60rem'}" 
+[globalFilterFields]="['name']">
+    <ng-template pTemplate="header">
+        <tr>
+            <th pSortableColumn="name">Nome <p-sortIcon field="name"></p-sortIcon></th>
+            <th>Descrição</th>
+            <th>Desenvolvedor</th>
+            <th>Publicador</th>
+            <th>Lançamento</th>
+        </tr>
+    </ng-template>
+    
+    <ng-template pTemplate="body" let-product>
+        <tr>
+            <td>{{product.name}}</td>
+            <td>{{product.description}}</td>
+            <td>{{product.developer}}</td>
+            <td>{{product.publisher}}</td>
+            <td>{{product.released_date}}</td>
+        </tr>
+    </ng-template>
+</p-table>

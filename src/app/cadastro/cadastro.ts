@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -13,12 +13,20 @@ export class CadastroComponent {
   usuario: string = '';
   senha: string = '';
 
-  constructor(private router: Router) {}
+  private router = inject(Router);
     
   cadastrar() {
     if (this.nome && this.email && this.usuario && this.senha) {
-      this.router.navigate(['/catalogo']);
-      alert('Conta criada.');
+      
+      const novoUsuario = {
+        usuario: this.usuario,
+        senha: this.senha
+      };
+
+      localStorage.setItem('currentUser', JSON.stringify(novoUsuario));
+      
+      this.router.navigate(['/login']);
+      alert('Conta criada!');
     } else {
       alert('Todos os campos são obrigatórios!'); 
     }

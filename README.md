@@ -1,59 +1,79 @@
-# InformataApp
+# Informata Frontend Test - Zelda Vault
+  
+Este projeto foi desenvolvido como parte do processo seletivo para a vaga de Desenvolvedor(a) Front-end na Informata.
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.3.
+O objetivo é construir uma aplicação Angular utilizando o PrimeNG como biblioteca de componentes e estilos, aplicando boas práticas de arquitetura, componentização e usabilidade.
 
-## Development server
+---
 
-To start a local development server, run:
+## Funcionalidades Implementadas
+
+- **Tela de Cadastro:** formulário simples para cadastro de usuário, salvando os dados no `localStorage`.
+- **Tela de Login:** validação do usuário com base nos dados cadastrados no `localStorage`.
+- **Logout:** limpa o `localStorage` e redireciona para a tela de login.
+- **Listagem de Itens:** consome a [API Zelda](https://docs.zelda.fanapis.com/) e exibe os itens.
+- **Busca de Itens:** campo de pesquisa que filtra a lista retornada pela API.
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+- [Angular 20+](https://angular.dev/) - Framework front-end
+- [PrimeNG](https://primeng.org/) - Biblioteca de componentes UI
+- [TypeScript](https://www.typescriptlang.org/) - Linguagem base do Angular
+- [Zelda API](https://docs.zelda.fanapis.com/) - API pública para listagem de itens
+
+---
+
+## Pré-requisitos
+
+- [Node.js (LTS)](https://nodejs.org/) – recomendado versão 18+
+- [Angular CLI](https://angular.io/cli) – versão mais recente
+- [npm](https://www.npmjs.com/) ou [yarn](https://yarnpkg.com/) – gerenciador de pacotes
+
+---
+
+## Rodando o Projeto Localmente
+
+1. **Clone o repositório:**
+
+```bash
+git clone https://github.com/VieiraLaris/Informata-Frontend-Test.git
+
+```
+2. **Entre no diretório do projeto:**
+
+```bash
+cd informata-frontend-test
+
+```
+
+3. **Instale as dependências:**
+
+```bash
+npm install 
+
+#Ou com yarn se preferir
+yarn install
+
+```
+
+4. **Inicie o servidor:**
 
 ```bash
 ng serve
+
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+5. **Acesse no navegador:**
 
-## Code scaffolding
+```arduino
+http://localhost:4200
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Limitações e problemas conhecidos
 
-```bash
-ng generate --help
-```
+- **Testes**: Infelizmente, não foram implementados testes para a verificação dos componentes.
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- **Responsividade**: A aplicação não possui uma responsividade ideal para dispositivos com telas menores (mobile), em especial na tela de **catálogo**.
